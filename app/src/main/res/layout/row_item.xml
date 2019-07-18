@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    android:background="@drawable/item_bg"
+    android:paddingRight="-2dp"
+    android:paddingLeft="-2dp"
+    android:paddingTop="-2dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الاستاذ محمد احمد علي"
+            android:textSize="12sp"
+            android:textColor="#363636"
+            android:layout_gravity="right"
+            android:fontFamily="@font/noor_regular"
+            android:padding="3dp"
+            />
+        <TextView
+            android:id="@+id/teacher_speciality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="التخصص : لغة انجليزية"
+            android:textSize="10sp"
+            android:textColor="#848484"
+            android:layout_gravity="right"
+            android:fontFamily="@font/noor_regular"
+            android:padding="3dp"/>
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/teacher_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user_example"
+        android:background="@drawable/user_bg"
+        android:padding="3dp"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

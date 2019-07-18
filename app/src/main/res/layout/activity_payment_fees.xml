@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background2"
+    tools:context=".Activities.Payment_fees">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/payment_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <ImageView
+            android:id="@+id/payment_back"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="تسديد الرسوم المستحقة"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/noor_regular"/>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:scrollX="0dp"
+        android:layout_width="match_parent"
+        android:scrollY="0dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/payment_toolbar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/user_bg"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="الحوالة البنكية"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/noor_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء"
+                    android:textColor="#b3b3b6"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/noor_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو"
+                    android:textColor="#b3b3b6"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/noor_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="شكل توضع الفقرات في الصفحة التي يقرأها."
+                    android:textColor="#b3b3b6"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/noor_regular"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="14dp"
+                android:paddingRight="14dp"
+                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/et_bg"
+                android:layout_height="wrap_content">
+
+                <com.isapanah.awesomespinner.AwesomeSpinner
+                    android:id="@+id/BankAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:spinnerDirection="rtl"
+                    app:spinnerHint="حساب البنك"
+                    android:paddingLeft="3dp"
+                    android:background="@android:color/transparent"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginRight="-2dp"
+                android:background="@drawable/layout_bg"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.95"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="اسم مالك الحساب"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="محمد احمد علي عبد الحميد"
+                        android:textColor="#3b3b3b"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="رقم الايبان"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="123456789123456789"
+                        android:textColor="#3b3b3b"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="رقم الحساب"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="147852369852147936"
+                        android:textColor="#3b3b3b"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/user_bg"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_bank" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="اسم المحمول"
+                    android:padding="10dp"
+                    android:textColor="#414141"
+                    android:textColorHint="#b3b3b6"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/noor_regular"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"/>
+
+                <EditText
+                    android:id="@+id/transfer_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="رقم الحوالة"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="#414141"
+                    android:textColorHint="#b3b3b6"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/noor_regular"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"/>
+
+                <Button
+                    android:id="@+id/payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bu_bg2"
+                    android:text="تسديد"
+                    android:textColor="#FFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/noor_regular"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

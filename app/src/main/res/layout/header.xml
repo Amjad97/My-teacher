@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/et_bg"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:focusableInTouchMode="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:padding="10dp"
+                android:src="@drawable/ic_search2" />
+            <EditText
+                android:layout_width="0dp"
+                android:focusable="true"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.9"
+                android:background="@android:color/transparent"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/noor_regular"
+                android:hint="اضف كلمة للبحث ( منطقة - مرحلة - تخصص )"
+                android:padding="10dp"
+                android:textColor="#414141"
+                android:textColorHint="#b3b3b6"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:imeOptions="actionSearch" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2c2c2c"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:fontFamily="@font/noor_regular"
+            android:padding="10dp"
+            android:text="قائمة المدرسين"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

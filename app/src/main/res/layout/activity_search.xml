@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".Activities.Search">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <ImageView
+            android:id="@+id/search_back"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="البحث عن معلم"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/noor_regular"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/search_toolbar"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/search_page_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#b3b3b6"
+            android:textSize="13sp"
+            android:fontFamily="@font/noor_regular"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/teacher_w"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:padding="10dp"
+                        android:text="معلمة"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:textColor="#FFF"
+                        android:background="@drawable/bu_bg2"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <TextView
+                        android:id="@+id/teacher_m"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="معلم"
+                        android:textColor="#b3b3b6"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/search_region_layout"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="14dp"
+                android:paddingRight="14dp"
+                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_bg"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:src="@drawable/list"
+                    android:padding="10dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/search_region_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/noor_regular"
+                    android:hint="المنطقة"
+                    android:padding="10dp"
+                    android:textColor="#414141"
+                    android:textColorHint="#b3b3b6"
+                    android:textSize="12sp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_level_layout"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="14dp"
+                android:paddingRight="14dp"
+                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_bg"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:src="@drawable/list"
+                    android:padding="10dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/search_level_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="المرحلة الدراسية"
+                    android:layout_weight="0.9"
+                    android:textColorHint="#b3b3b6"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:textColor="#414141"
+                    android:padding="10dp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/noor_regular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_level_select_layout"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="14dp"
+                android:paddingRight="14dp"
+                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_bg"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:src="@drawable/list"
+                    android:padding="10dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/search_level_select_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="اختر مرحلة"
+                    android:layout_weight="0.9"
+                    android:textColorHint="#b3b3b6"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:textColor="#414141"
+                    android:padding="10dp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/noor_regular"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="التخصص"
+                android:textColorHint="#b3b3b6"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:textColor="#414141"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="@font/noor_regular"
+                android:singleLine="true"
+                android:imeOptions="actionDone"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bu_bg2"
+        android:text="بحث"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/noor_regular"/>
+
+</RelativeLayout>

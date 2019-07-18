@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="40dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image_rate"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/user_bg"
+            android:padding="3dp"
+            android:layout_gravity="center"
+            android:src="@drawable/user"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="قم بتقييم اداء"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/noor_regular"/>
+
+        <TextView
+            android:id="@+id/user_name_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الاستاذ / احمد محمد علي"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/noor_regular"/>
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/user_rate_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="5"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/pop_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تقييم"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/noor_regular"
+            android:background="@drawable/bu_bg2"/>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

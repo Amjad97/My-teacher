@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Teacher_rating"
+    android:background="@drawable/background2">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/rating_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <ImageView
+            android:id="@+id/rating_back"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:src="@drawable/back"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rating_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/rating_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                android:layout_below="@id/rating_toolbar">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:layout_marginBottom="25dp"
+                    android:paddingBottom="30dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/user_bg2"
+                        android:padding="3dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/user"/>
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/user_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rating="2"
+                        android:isIndicator="true"
+                        android:clickable="false"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:progressTint="@android:color/white"
+                        android:secondaryProgressTint="#17a387"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        />
+
+                    <TextView
+                        android:id="@+id/teacher_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="الاستاذ محمد أحمد علي"
+                        android:textSize="14sp"
+                        android:textColor="#FFF"
+                        android:fontFamily="@font/noor_regular"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:layout_gravity="bottom">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15">
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/rating"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bu_bg4"
+                        android:text="تقييم المدرس"
+                        android:textSize="14sp"
+                        android:textColor="#FFF"
+                        android:fontFamily="@font/noor_regular"
+                        />
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_layout"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/te_bg"
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingRight="14dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/teacher_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="اتصال"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:padding="10dp"
+                        android:src="@drawable/phone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/te_bg"
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingRight="14dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/teacher_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="معلم"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_person" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/te_bg"
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingRight="14dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/teacher_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="المملكة العربية السعودية - الرياض"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_location" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/te_bg"
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingRight="14dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/teacher_grade"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="الثانوية - أولى ثانوي"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_level" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/te_bg"
+                    android:orientation="horizontal"
+                    android:paddingStart="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingRight="14dp"
+                    android:weightSum="1"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/teacher_speciality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="كيمياء - أحياء - رياضيات - انجليزي"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/noor_regular"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_book" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".Activities.ContactActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/contact_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <ImageView
+            android:id="@+id/contact_back"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="أضف اقتراح"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/noor_regular"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/contact_toolbar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:padding="4dp"
+            android:src="@drawable/user"
+            android:background="@drawable/user_bg"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="تواصل معنا"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/noor_regular"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingLeft="12dp"
+            android:paddingEnd="14dp"
+            android:paddingRight="14dp"
+            android:layout_marginTop="20dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:padding="8dp"
+                android:src="@drawable/person" />
+
+            <EditText
+                android:id="@+id/contact_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:background="@android:color/transparent"
+                android:drawablePadding="10dp"
+                android:hint="الاسم"
+                android:padding="10dp"
+                android:textColor="#414141"
+                android:textColorHint="#b3b3b6"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/noor_regular"
+                android:singleLine="true"
+                android:imeOptions="actionNext"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:paddingEnd="14dp"
+            android:paddingRight="14dp"
+            android:paddingStart="12dp"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:src="@drawable/phone"
+                android:padding="10dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/contact_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="رقم الجوال"
+                android:layout_weight="0.9"
+                android:textColorHint="#b3b3b6"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:inputType="phone"
+                android:background="@android:color/transparent"
+                android:textColor="#414141"
+                android:padding="10dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/noor_regular"
+                android:singleLine="true"
+                android:imeOptions="actionNext"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/contact_identity_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="رقم الهوية / الاقامة"
+            android:textColorHint="#b3b3b6"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:textColor="#414141"
+            android:inputType="number"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/noor_regular"
+            android:singleLine="true"
+            android:imeOptions="actionNext"/>
+
+        <EditText
+            android:id="@+id/contact_message"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="نص الرسالة"
+            android:textColorHint="#b3b3b6"
+            android:textSize="12sp"
+            android:gravity="start"
+            android:textColor="#414141"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg2"
+            android:fontFamily="@font/noor_regular"
+            android:imeOptions="actionNext"/>
+        <Button
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ارسال"
+            android:textSize="14sp"
+            android:textColor="#FFF"
+            android:background="@drawable/bu_bg2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/noor_regular"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
